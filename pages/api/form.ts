@@ -1,3 +1,4 @@
+console.log("here")
 import { ChatGPTAPI } from 'chatgpt'
 
 export default async function handler(req, res) {
