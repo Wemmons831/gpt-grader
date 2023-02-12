@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import { ChatGPTAPI } from 'chatgpt'
+
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -17,17 +17,22 @@ const handleSubmit = async (event) => {
     response: event.target.Responce.value,
   }
 
-  
-  const api = new ChatGPTAPI({
-    apiKey: process.env.OPENAI_API_KEY
-  })
-  if (!data.rubric) {
-    data.rubric = "N/A"
-  }
-  const result = await api.sendMessage('please grade the following Comp Sci given the following: Prompt:' + data.prompt + ', Rubric:' + data.rubric + ', Response:' + data.response + "please only return grade percentage")
-  alert(`Assignment Grade: ${result.text}`)
-}
+  const JSONdata = JSON.stringify(data)
+  const endpoint = '/api/form'
 
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSONdata,
+  }
+
+  const response = await fetch(endpoint, options)
+
+  const result = await response.json()
+  alert(`Assignment Grade: ${result.data}`)
+}
 
 
 
