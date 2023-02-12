@@ -14,5 +14,12 @@ module.exports = {nextConfig,  eslint: {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  output: 'standalone',
+
+
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+
+    return config;
+  },
 }
