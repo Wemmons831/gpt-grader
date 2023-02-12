@@ -49,7 +49,7 @@ export default function Home() {
       </div>
       
       <div className='  text-center pt-20'>
-          <form onSubmit={handleSubmit} className=' '>
+          <form onSubmit={handleSubmit} className=' ' netlify>
             <div className=' '>
               <label htmlFor="Rubric">Rubric: </label>
               <input type="text" id="Rubric" name="Rubric" />
