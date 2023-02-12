@@ -14,4 +14,5 @@ module.exports = {nextConfig,  eslint: {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-target: "serverless",}
+  output: 'standalone',
+}
