@@ -15,9 +15,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-        cd ..
-        ls
-        cd home/gpt-grader
-        git pull origin main
-        npm run build
+          cd ..
+          ls
+          cd home/gpt-grader
+          git pull origin main
+          npm run build
         
