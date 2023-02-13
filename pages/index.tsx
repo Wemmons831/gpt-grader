@@ -53,7 +53,7 @@ export default function Home() {
       <div className='  text-center pt-20'>
           <form onSubmit={handleSubmit} className=' '>
             <div className=' '>
-              <label htmlFor="Rubric">Rubric: </label>
+              <label htmlFor="Rubric">(optional) Rubric: </label>
               <input type="text" id="Rubric" name="Rubric" />
             </div>
             <div className=' '>
