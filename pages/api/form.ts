@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     if(!body.rubric){
         body.rubric = "N/A"
     }
-    const resualt = await api.sendMessage('please grade the following Comp Sci given the following: Prompt:' + body.prompt + ', Rubric:' + body.rubric + ', Response:' + body.response + "please only return grade percentage")
+    const resualt = await api.sendMessage('grade the following assignment given the following: Prompt:' + body.prompt + ', Rubric:' + body.rubric + ', Response:' + body.response + "please only return grade percentage grade the assignment as if you were a highschool teacher")
 
 
 
