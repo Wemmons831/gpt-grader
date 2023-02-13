@@ -47,7 +47,7 @@ export default function Home() {
       <div className=' text-center'>
         <text className=' text-center text-6xl'>GPT-GRADER</text>
         <br></br>
-        <text className=" text-center ">version : 0.12</text>
+        <text className=" text-center ">version : 0.13</text>
       </div>
       
       <div className='  text-center pt-20'>
