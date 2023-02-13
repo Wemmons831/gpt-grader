@@ -64,7 +64,7 @@ export default function Home() {
             <label htmlFor="Promt">Response:  </label>
             <input type="text" id="Responce" name="Responce" required />
             </div>
-            <button type="submit" className='rounded-lg'>Submit</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
     </main>
