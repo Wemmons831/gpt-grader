@@ -45,7 +45,7 @@ export default function Home() {
     </header>
     <main >
       <div className=' text-center'>
-        <text className=' text-center text-6xl'>GPT-GRADER</text>
+        <text className=' text-center text-6xl'>GPT-GRADER test</text>
       </div>
       
       <div className='  text-center pt-20'>
