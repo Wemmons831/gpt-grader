@@ -18,7 +18,3 @@ export default async function handler(req, res) {
     // Sends a HTTP success code
     res.status(200).json({ data: resualt.text })
 }
-
-export const config = {
-    type: "experimental-background",
-};
