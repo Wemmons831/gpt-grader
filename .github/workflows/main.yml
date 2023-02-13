@@ -14,4 +14,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: echo hello
+        script: |
+        cd ..
+        ls
+        cd home/gpt-grader
+        git pull origin main
+        npm run build
+        
