@@ -4,11 +4,11 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
-var grade = ""
+const [grade,setGrade] = React.useState("")
 
 const handleSubmit = async (event) => {
   // Stop the form from submitting and refreshing the page.
-  grade = "loadings"
+  setGrade("loading")
   event.preventDefault()
 
   // Get data from the form.
@@ -33,7 +33,7 @@ const handleSubmit = async (event) => {
 
   const result = await response.json()
   
-  grade = 'Assignment Grade: ${result.data}'
+  setGrade("Assignment Grade:" + response.text)
 }
 
 
