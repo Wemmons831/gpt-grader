@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [grade,setGrade] = React.useState("N/A")
-  const handleSubmit = async (event) => {
+  function handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
     setGrade("loading")
     event.preventDefault()
