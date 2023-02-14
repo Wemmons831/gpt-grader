@@ -32,8 +32,9 @@ const handleSubmit = async (event) => {
   const response = await fetch(endpoint, options)
 
   const result = await response.json()
-  
+  console.log("first" + grade)
   setGrade("Assignment Grade:" + response.text)
+  console.log(grade)
 }
 
 
