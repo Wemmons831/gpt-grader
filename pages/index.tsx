@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
-
+const grade = ""
 
 const handleSubmit = async (event) => {
   // Stop the form from submitting and refreshing the page.
@@ -31,7 +31,8 @@ const handleSubmit = async (event) => {
   const response = await fetch(endpoint, options)
 
   const result = await response.json()
-  alert(`Assignment Grade: ${result.data}`)
+  
+  grade = 'Assignment Grade: ${result.data}'
 }
 
 
@@ -66,6 +67,9 @@ export default function Home() {
             </div>
             <button type="submit">Submit</button>
           </form>
+        </div>
+        <div>
+          <text>{grade}</text>
         </div>
     </main>
     </>
