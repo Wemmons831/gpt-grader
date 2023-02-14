@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
-const grade = ""
+var grade = ""
 
 const handleSubmit = async (event) => {
   // Stop the form from submitting and refreshing the page.
