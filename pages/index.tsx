@@ -73,7 +73,7 @@ export default function Home() {
           </form>
         </div>
         <div>
-          <text>({grade})</text>
+          <text>{grade}</text>
         </div>
     </main>
     </>
