@@ -8,6 +8,7 @@ var grade = ""
 
 const handleSubmit = async (event) => {
   // Stop the form from submitting and refreshing the page.
+  grade = "loadings"
   event.preventDefault()
 
   // Get data from the form.
@@ -69,7 +70,7 @@ export default function Home() {
           </form>
         </div>
         <div>
-          <text>{grade}</text>
+          <text>grade: {grade}</text>
         </div>
     </main>
     </>
