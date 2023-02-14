@@ -6,42 +6,43 @@ import React from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
 
-const handleSubmit = async (event) => {
-  // Stop the form from submitting and refreshing the page.
-  setGrade("loading")
-  event.preventDefault()
 
-  // Get data from the form.
-  const data = {
-    rubric: event.target.Rubric.value,
-    prompt: event.target.Prompt.value,
-    response: event.target.Responce.value,
-  }
-
-  const JSONdata = JSON.stringify(data)
-  const endpoint = '/api/form'
-
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSONdata,
-  }
-
-  const response = await fetch(endpoint, options)
-
-  const result = await response.json()
-  console.log("first" + grade)
-  setGrade("Assignment Grade:" + response.text)
-  console.log(grade)
-}
 
 
 
 
 export default function Home() {
   const [grade,setGrade] = React.useState()
+  const handleSubmit = async (event) => {
+    // Stop the form from submitting and refreshing the page.
+    setGrade("loading")
+    event.preventDefault()
+  
+    // Get data from the form.
+    const data = {
+      rubric: event.target.Rubric.value,
+      prompt: event.target.Prompt.value,
+      response: event.target.Responce.value,
+    }
+  
+    const JSONdata = JSON.stringify(data)
+    const endpoint = '/api/form'
+  
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSONdata,
+    }
+  
+    const response = await fetch(endpoint, options)
+  
+    const result = await response.json()
+    console.log("first" + grade)
+    setGrade("Assignment Grade:" + response.text)
+    console.log(grade)
+  }
   return (
     <>
     <header>
