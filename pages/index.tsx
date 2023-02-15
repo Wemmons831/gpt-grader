@@ -7,11 +7,6 @@ import React from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
 
-
-
-
-
-
 export default function Home() {
   const [grade,setGrade] = React.useState("N/A")
   async function handleSubmit(event) {
