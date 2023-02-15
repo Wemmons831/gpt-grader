@@ -7,10 +7,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v2.3.2
-    - name: change version number  
-      run: python3 version_changer.py
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v0.1.7
       with:
@@ -23,5 +19,6 @@ jobs:
           ls
           cd home/gpt-grader
           git pull origin main
+          python3 version_changer.py
           npm run build
         
