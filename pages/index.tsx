@@ -1,3 +1,4 @@
+const version = "0.16"
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
@@ -39,8 +40,8 @@ export default function Home() {
     const response = await fetch(endpoint, options)
   
     const result = await response.json()
-    console.log("first" + grade)
-    setGrade("Assignment Grade:" + response.text)
+    console.log(result.data)
+    setGrade(result.data)
     console.log(grade)
   }
   return (
@@ -52,7 +53,7 @@ export default function Home() {
       <div className=' text-center'>
         <text className=' text-center text-6xl'>GPT-GRADER</text>
         <br></br>
-        <text className=" text-center ">version : 0.13</text>
+        <text className=" text-center ">version : {version}</text>
       </div>
       
       <div className='  text-center pt-20'>
@@ -72,8 +73,8 @@ export default function Home() {
             <button type="submit">Submit</button>
           </form>
         </div>
-        <div>
-          <text>grade: {grade}</text>
+        <div className=' text-center'>
+          <text>{grade}</text>
         </div>
     </main>
     </>
